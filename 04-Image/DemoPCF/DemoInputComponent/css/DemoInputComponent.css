@@ -1,0 +1,20 @@
+.DemoInputComponent span{
+    color: green;
+}
+
+.DemoInputComponent div .icon{
+    width:10px;
+    height:10px;
+
+    background-image: url("../img/success.png");
+    background-size: contain;
+    background-repeat:no-repeat;
+}
+
+.DemoInputComponent div.invalid span{
+    color: red;
+}
+
+.DemoInputComponent div.invalid .icon{
+    background-image: url("../img/error.png");
+}   

@@ -1,0 +1,7 @@
+.DemoInputComponent span{
+    color: green;
+}
+
+.DemoInputComponent div.invalid span{
+    color: red;
+}
