@@ -53,7 +53,7 @@ In the CSS we would like to change the color of our span element to green and to
     color: green;
 }
 
-.DemoInputComponent div.invalid span{
+.DemoInputComponent span.invalid{
     color: red;
 }
 ```

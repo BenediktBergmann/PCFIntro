@@ -89,6 +89,20 @@ To add our icons to the "holding" div we have to
 - define the height of the div
 
 Our standard will be to show the success image, but when the wrapper div has the "invalid" class we will change to the error image.
+We have to change the current scss selectors to take our additional wrapper in consideration.
+So we change them to 
+``` CSS
+.DemoInputComponent div span
+```
+
+and
+
+``` CSS
+.DemoInputComponent div.invalid span
+```
+
+In addition to that we have to add the styling of the icon.
+Below is the code for that.
 
 ```CSS
 .DemoInputComponent div .icon{
