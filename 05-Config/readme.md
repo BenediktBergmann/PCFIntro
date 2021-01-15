@@ -48,14 +48,14 @@ pac pcf push -pp <prefix>
 
 #### Config in Dataverse
 To configure our PCF we open the field properties again. When you select your demo PCF you will see two new rows (Min & Max). By clicking the little pen symbol a config window will open.
+
 ![Min/Max config](images/minMaxConfig.png "Min/Max config")
 
 In this popup you could either define a fixed value or choose a field which will provide the value, which makes it even more dynamic.
+
 ![Config min](images/configMin.png "Config min")
 
 Feel free to play around with it. Try different ranges. Configure the PCF several times, maybe with different ranges.
 
 ## Conclusion
 In this chapter you learned how to make it possible to configure your PCF and make it more reusable.
-
-We were able to create a very simple pcf within a "few" minutes. There is obviously a lot more that could be achieved. I might add more tutorials to this repo in the future.
