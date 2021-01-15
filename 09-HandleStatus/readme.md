@@ -18,11 +18,11 @@ First we add another variable at the beginning of the class which holds the mask
 private _maskValue = "******";
 ```
 
-##### Change checkInput function
+##### Change inputOnChanged function
 
-In the "checkInput" function we have to add the _maskValue as a condition of the if statement.
+In the "inputOnChange" function we have to add a if statement around our code. The if should check if the input has the same value as _maskValue.
 ```Typescript
-if(!input || parseInt(input) === NaN || this._input.value == this._emptyValue || this._input.value == this._maskValue)
+if(this._input.value !== this._maskValue)
 ```
 
 ##### Change updateView function
