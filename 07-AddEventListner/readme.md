@@ -23,7 +23,7 @@ private _inputOnChange: EventListenerOrEventListenerObject;
 ```
 
 ##### Add function to handle change
-Next step is to add a function which handles changes of the input. This function will be binded to the event listner later.
+Next step is to add a function which handles changes of the input. This function will be bound to the event listner later.
 We will call it "inputOnChange", it should not have any parameters and be of type void. It is (for now) a quite simple function which only
 - fills our _value with the input value (we have to parse it to int) and
 - calls the notifyOutputChanged function
