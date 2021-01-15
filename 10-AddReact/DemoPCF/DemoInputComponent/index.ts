@@ -131,14 +131,12 @@ export class DemoInputComponent implements ComponentFramework.StandardControl<II
 	}
 
 	public inputOnChange():void{
-		if(this._input.value !== this._emptyValue && this._input.value !== this._maskValue){
-			this.checkInput(this._input.value);
-			this._notifyOutputChanged();
-		}
+		this.checkInput(this._input.value);
+		this._notifyOutputChanged();
 	}
 
 	private checkInput(input: string | null){
-		if(!input || parseInt(input) === NaN){
+		if(!input || parseInt(input) === NaN || this._input.value == this._emptyValue || this._input.value == this._maskValue){
 			this._input.value = this._emptyValue;
 			this._value = undefined;
 		} else {

@@ -19,7 +19,7 @@ private _emptyValue = "---";
 ##### Add function to check input
 Next step would be to add a function which checks whether the input is correct or not. This function will later be called from two different places (inputOnChange and updateView).
 
-The function should take one parameter of type string or null. It then check if the input is valid and a number.
+The function should take one parameter of type string, null or like our emptyValue. It then check if the input is valid and a number.
 
 If it is not it should show the empty value in the input field and set the _value variable to "undefined", which will clear the underlying coloumn.
 
@@ -29,7 +29,7 @@ If it is and
 
 ```Typescript
 private checkInput(input: string | null){
-	if(!input || parseInt(input) === NaN){
+	if(!input || parseInt(input) === NaN || this._input.value == this._emptyValue){
 		this._input.value = this._emptyValue;
 		this._value = undefined;
 	} else {
@@ -54,14 +54,11 @@ this.checkInput(context.parameters.input.raw?.toString() ?? "");
 ##### Change inputOnChange function
 The "inputInChange" function has to call our new function as well.
 Todo so we delete the row that sets the _value and replace it with a call to the new function where the parameter is the value of our input.
-In addition to that we have to wrapp everything in an if statement. There we check whether the value if the input is the same as the emptyvalue. If so we do nothing otherwise we execute our code. This needs to be done to prevent infinity loops.
 
 ```Typescript
 public inputOnChange():void{
-	if(this._input.value !== this._emptyValue){
-		this.checkInput(this._input.value);
-		this._notifyOutputChanged();
-	}
+	this.checkInput(this._input.value);
+	this._notifyOutputChanged();
 }
 ```
 
