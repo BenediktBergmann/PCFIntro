@@ -81,16 +81,20 @@ The CLI will use the connection that is marked with a * when you run `pac auth l
 If you login to your environemnt you should see a solution, called "PowerAppsTools_\<prefix>", which contains your PCF.
 
 To be able to add a custom component we, unfortunatetly, have to switch to the classic editor of an form.
+
 ![Switch to classic](images/switchToClassic.png "Switch to classic")
 
 Here we add the field called "Number" a second time.
 When dubbel clicking on that a new pop up opens, in there you have to choose "Controls" and then "Add Control".
+
 ![Add control](images/addControl.png "Add control")
 
 In the second pop up you select your PCF from the list and press "Add".
+
 ![Choose control](images/chooseControl.png "Choose control")
 
 It is important to select for which device it should be shown. In our case "Web".
+
 ![Config web](images/configWeb.png "Config web")
 
 Save and publish everything and enjoy your first PCF.
