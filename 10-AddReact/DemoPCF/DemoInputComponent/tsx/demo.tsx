@@ -7,7 +7,7 @@ export interface IDemoProps {
 export class Demo extends React.Component<IDemoProps> {
     public render() {
         return (
-            <div>
+            <div className="test">
                 React: {this.props.value?.toString()}
             </div>
         )
